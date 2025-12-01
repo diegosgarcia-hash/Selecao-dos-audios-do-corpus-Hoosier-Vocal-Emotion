@@ -2,7 +2,7 @@ PennController.ResetPrefix(null);
 PennController.DebugOff();
 var showProgressBar = false;
 
-Sequence("Participants","Instructions", randomize("experiment"), SendResults(), "final");
+Sequence("Participants","Instructions", randomize("Experiment"), SendResults(), "Final");
 
 Header(
     defaultText
@@ -45,7 +45,7 @@ Header(
         newText("<p><strong>INSTRUÇÕES:</strong></p>")
         .center()
         ,
-        newText('<p style="text-align:center;">Assista com atenção ao vídeo a seguir para compreender como o teste irá funcionar. Após a conclusão do vídeo, clique no botão “Continuar” ou pressione a tecla “C” no teclado.</p>')
+        newText('<p style="text-align:center;">Assista com atenção ao vídeo a seguir para compreender como o teste irá funcionar. Após a conclusão do vídeo clique no botão “INICIAR”.</p>')
         ,  
         newHtml("yt", `
             <iframe width="560" height="315"
@@ -63,19 +63,25 @@ Header(
 )
 
 Template("lista_de_pseudopalavras.csv",
-    row => newTrial ("experiment",
+    row => newTrial ("Experiment",
         newAudio("AudioExperiment", row.audio)
-            .play()
             ,
             
-        newImage("play.png")
-            .size( 90, 90)
+        newText("nome", `<p style="font-size: 1.8em;"><strong>${row.sentenca}</strong></p>`)
             .center()
-            .print
-            ,
-
-        getImage("play.png")
-            .remove()
+            .print()
+        ,
+        
+        newText("transcricao", `<p style="font-size: 1.3em; color: #444;">${row.transcricao}</p>`)
+            .center()
+            .print()
+        ,
+        
+        getAudio("AudioExperiment")
+            .play()
+        ,
+        
+        newText("<p></p>")
         ,
                      
         newText("S", row.aprovar)
@@ -83,26 +89,45 @@ Template("lista_de_pseudopalavras.csv",
         newText("N", row.remover)
         ,
         
-        newCanvas( "2000vw, 800vh")
-            .add( "center at 25%" , "middle at 2%", getText("S") )
-            .add( "center at 75%" , "middle at 2%", getText("N") )
-            .print
+        newCanvas( "opcoes", 800, 200)
+            .add( "center at 40%" , "middle at 50%", getText("S") )
+            .add( "center at 60%" , "middle at 50%", getText("N") )
+            .center()
+            .print()
         ,
-        newSelector()
+        
+        newVar("RESPOSTA")
+            .global()
+        ,
+        
+        newSelector("ESCOLHA")
             .add( getText("S"), getText("N"))
             .keys("S","N")
             .log()
             .wait()
+            .test.selected(getText("S"))
+                    .success( getVar("RESPOSTA").set(row.aprovar) )
+                    .failure( getVar("RESPOSTA").set(row.remover) )
     )
 
-    .log("grupo", row.grupo)
-    .log("intem", row.intem)
+    .log("NOME", getVar("NOME"))             // nome do participante
+    .log("AUDIO", row.audio)                 // nome do arquivo de áudio
+    .log("SENTENCA", row.sentenca)           // nome exibido
+    .log("TRANSCRICAO", row.transcricao)     // transcrição exibida
+    .log("RESPOSTA",    getVar("RESPOSTA"))  // RESPOSTA
+    .log("GRUPO", row.grupo)                 // se precisar
+    .log("ITEM", row.intem)                   // se precisar
 
 )
     
 newTrial( "Final" ,
     newText("<p> Trabalho finalizado, obrigada pela participação!</p>")
     .center()
+    .print()
+    ,
+
+    newButton("Finalizar")
+    .wait()
  )
 
 .setOption("countsForProgressBar",false);
