@@ -1,38 +1,38 @@
-audio,sentenca,transcricao,aprovar,remover,intem,grupo
-a_AG_01_1.wav,nervack,/’nɜɹvæk/,Aprovar,Remover,1,1
-a_AG_02_1.wav,lorack,/’loɹæk/,Aprovar,Remover,2,1
-a_AG_03_1.wav,lairet,/’lɛɹət/,Aprovar,Remover,3,1
-a_AG_04_1.wav,vokered,/’voʊkəɹd/,Aprovar,Remover,4,1
-a_AG_05_1.wav,tairack,/’tɛɹək/,Aprovar,Remover,5,1
-a_AG_06_1.wav,domner,/’dɑmnəɹ/,Aprovar,Remover,6,1
-a_AG_07_1.wav,nammy,/’næmi/,Aprovar,Remover,7,1
-a_AG_08_1.wav,tannock,/’tænək/,Aprovar,Remover,8,1
-a_AG_09_1.wav,agerth,/’ægəɹθ/,Aprovar,Remover,9,1
-a_AG_10_1.wav,armidge,/’ɑɹmɪdʒ/,Aprovar,Remover,10,1
-a_AG_11_1.wav,burish,/’bʊɹɪʃ/,Aprovar,Remover,11,1
-a_AG_12_1.wav,dernom,/’dɜɹnəm/,Aprovar,Remover,12,1
-a_AG_13_1.wav,revo,/’ɹɛvoʊ/,Aprovar,Remover,13,1
-a_AG_14_1.wav,fingill,/’fɪŋgəl/,Aprovar,Remover,14,1
-a_AG_15_1.wav,jouless,/’dʒoʊlɛs/,Aprovar,Remover,15,1
-a_AG_16_1.wav,lebby,/’lɛbi/,Aprovar,Remover,16,1
-a_AG_17_1.wav,lowmen,/’loʊmən/,Aprovar,Remover,17,1
-a_AG_18_1.wav,madage,/’mædədʒ/,Aprovar,Remover,18,1
-a_AG_19_1.wav,menno,/’mɛnoʊ/,Aprovar,Remover,19,1
-a_AG_20_1.wav,merrus,/’mɛɹəs/,Aprovar,Remover,20,1
-a_AG_21_1.wav,mowan,/’moʊwən/,Aprovar,Remover,21,1
-a_AG_22_1.wav,nabick,/’næbɪk/,Aprovar,Remover,22,1
-a_AG_23_1.wav,nemmy,/’nɛmi/,Aprovar,Remover,23,1
-a_AG_24_1.wav,nidder,/’nɪdəɹ/,Aprovar,Remover,24,1
-a_AG_25_1.wav,nillen,/’nɪlən/,Aprovar,Remover,25,1
-a_AG_26_1.wav,nomel,/’nɔməl/,Aprovar,Remover,26,1
-a_AG_27_1.wav,nomey,/’noʊmi/,Aprovar,Remover,27,1
-a_AG_28_1.wav,ramidge,/’ɹæmɪdʒ/,Aprovar,Remover,28,1
-a_AG_29_1.wav,shavil,/’ʃævɪl/,Aprovar,Remover,29,1
-a_AG_30_1.wav,shibur,/’ʃɪbəɹ/,Aprovar,Remover,30,1
-a_AG_31_1.wav,slover,/’sloʊvəɹ/,Aprovar,Remover,31,1
-a_AG_32_1.wav,terrel,/’tɛɹəl/,Aprovar,Remover,32,1
-a_AG_33_1.wav,thager,/’θægəɹ/,Aprovar,Remover,33,1
-a_AG_34_1.wav,thomer,/’θoʊməɹ/,Aprovar,Remover,34,1
-a_AG_35_1.wav,valish,/’vælɪʃ/,Aprovar,Remover,35,1
-a_AG_36_1.wav,venner,/’vɛnəɹ/,Aprovar,Remover,36,1
-a_AG_37_1.wav,verney,/’vɜɹni/,Aprovar,Remover,37,1
+audio,sentenca,transcricao,Aprovar,Remover,intem,grupo
+a_AG_01_1.wav,nervack,/’nɜɹvæk/,Aprovar (S),Remover (N),1,1
+a_AG_02_1.wav,lorack,/’loɹæk/,Aprovar (S),Remover (N),2,1
+a_AG_03_1.wav,lairet,/’lɛɹət/,Aprovar (S),Remover (N),3,1
+a_AG_04_1.wav,vokered,/’voʊkəɹd/,Aprovar (S),Remover (N),4,1
+a_AG_05_1.wav,tairack,/’tɛɹək/,Aprovar (S),Remover (N),5,1
+a_AG_06_1.wav,domner,/’dɑmnəɹ/,Aprovar (S),Remover (N),6,1
+a_AG_07_1.wav,nammy,/’næmi/,Aprovar (S),Remover (N),7,1
+a_AG_08_1.wav,tannock,/’tænək/,Aprovar (S),Remover (N),8,1
+a_AG_09_1.wav,agerth,/’ægəɹθ/,Aprovar (S),Remover (N),9,1
+a_AG_10_1.wav,armidge,/’ɑɹmɪdʒ/,Aprovar (S),Remover (N),10,1
+a_AG_11_1.wav,burish,/’bʊɹɪʃ/,Aprovar (S),Remover (N),11,1
+a_AG_12_1.wav,dernom,/’dɜɹnəm/,Aprovar (S),Remover (N),12,1
+a_AG_13_1.wav,revo,/’ɹɛvoʊ/,Aprovar (S),Remover (N),13,1
+a_AG_14_1.wav,fingill,/’fɪŋgəl/,Aprovar (S),Remover (N),14,1
+a_AG_15_1.wav,jouless,/’dʒoʊlɛs/,Aprovar (S),Remover (N),15,1
+a_AG_16_1.wav,lebby,/’lɛbi/,Aprovar (S),Remover (N),16,1
+a_AG_17_1.wav,lowmen,/’loʊmən/,Aprovar (S),Remover (N),17,1
+a_AG_18_1.wav,madage,/’mædədʒ/,Aprovar (S),Remover (N),18,1
+a_AG_19_1.wav,menno,/’mɛnoʊ/,Aprovar (S),Remover (N),19,1
+a_AG_20_1.wav,merrus,/’mɛɹəs/,Aprovar (S),Remover (N),20,1
+a_AG_21_1.wav,mowan,/’moʊwən/,Aprovar (S),Remover (N),21,1
+a_AG_22_1.wav,nabick,/’næbɪk/,Aprovar (S),Remover (N),22,1
+a_AG_23_1.wav,nemmy,/’nɛmi/,Aprovar (S),Remover (N),23,1
+a_AG_24_1.wav,nidder,/’nɪdəɹ/,Aprovar (S),Remover (N),24,1
+a_AG_25_1.wav,nillen,/’nɪlən/,Aprovar (S),Remover (N),25,1
+a_AG_26_1.wav,nomel,/’nɔməl/,Aprovar (S),Remover (N),26,1
+a_AG_27_1.wav,nomey,/’noʊmi/,Aprovar (S),Remover (N),27,1
+a_AG_28_1.wav,ramidge,/’ɹæmɪdʒ/,Aprovar (S),Remover (N),28,1
+a_AG_29_1.wav,shavil,/’ʃævɪl/,Aprovar (S),Remover (N),29,1
+a_AG_30_1.wav,shibur,/’ʃɪbəɹ/,Aprovar (S),Remover (N),30,1
+a_AG_31_1.wav,slover,/’sloʊvəɹ/,Aprovar (S),Remover (N),31,1
+a_AG_32_1.wav,terrel,/’tɛɹəl/,Aprovar (S),Remover (N),32,1
+a_AG_33_1.wav,thager,/’θægəɹ/,Aprovar (S),Remover (N),33,1
+a_AG_34_1.wav,thomer,/’θoʊməɹ/,Aprovar (S),Remover (N),34,1
+a_AG_35_1.wav,valish,/’vælɪʃ/,Aprovar (S),Remover (N),35,1
+a_AG_36_1.wav,venner,/’vɛnəɹ/,Aprovar (S),Remover (N),36,1
+a_AG_37_1.wav,verney,/’vɜɹni/,Aprovar (S),Remover (N),37,1
