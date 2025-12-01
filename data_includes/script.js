@@ -2,7 +2,7 @@ PennController.ResetPrefix(null);
 PennController.DebugOff();
 var showProgressBar = false;
 
-Sequence("Participants","Instructions", randomize("experiment"), SendResults());
+Sequence("Participants","Instructions", randomize("experiment"), SendResults(), "final");
 
 Header(
     defaultText
@@ -73,11 +73,14 @@ Template("lista_de_pseudopalavras.csv",
             .center()
             .print
             ,
-            //adicionar os botões aqui!
-            
-        newText("S", row.aprovar)
+
+        getImage("alto_falante_icone.png")
+            .remove()
         ,
-        newText("N", row.remover)
+                     
+        newText("S", variable.aprovar)
+        ,
+        newText("N", variable.remover)
         ,
         
         newCanvas( "2000vw, 800vh")
@@ -92,18 +95,14 @@ Template("lista_de_pseudopalavras.csv",
             .wait()
     )
 
-    .log("grupo", row.grupo)
-    .log("intem", row.intem)
+    .log("grupo", variable.grupo)
+    .log("intem", variable.intem)
 
 )
     
 newTrial( "Final" ,
-    newText("<p> O experimento foi concluído. Obrigada pela participação!</p>")
+    newText("<p> Trabalho finalizado, obrigada pela participação!</p>")
     .center()
-    ,
-    newText("<p> Você receberá um e-mail com a sua declaração de participação.</p>")
-    .center()
-    .wait()
  )
 
 .setOption("countsForProgressBar",false);
