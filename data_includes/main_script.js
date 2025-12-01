@@ -25,7 +25,7 @@ Header(
     newTrial("Participants",
         newText("<p>Bem-Vindos!</p>")
         ,
-        newText("<p>Antes de iniciar, escreva o seu <strong>NOME</strong> abaixo:</p>")
+        newText("<p>Antes de iniciar, escreva o seu <strong>nome completo</strong> abaixo.</p>")
         ,
         newTextInput("Nome")
         ,
@@ -45,7 +45,7 @@ Header(
         newText("<p><strong>INSTRUÇÕES:</strong></p>")
         .center()
         ,
-        newText('<p style="text-align:center;">Assista com atenção ao vídeo a seguir para compreender como o teste irá funcionar. Após a conclusão do vídeo clique no botão “INICIAR”.</p>')
+        newText('<p style="text-align:center;">Assista com atenção ao vídeo a seguir para compreender como o teste irá funcionar.</p>')
         ,  
         newHtml("yt", `
             <iframe width="560" height="315"
@@ -84,9 +84,9 @@ Template("lista_de_pseudopalavras.csv",
         newText("<p></p>")
         ,
                      
-        newText("S", row.aprovar)
+        newText("S", row.Aprovar)
         ,
-        newText("N", row.remover)
+        newText("N", row.Remover)
         ,
         
         newCanvas( "opcoes", 800, 200)
@@ -106,8 +106,8 @@ Template("lista_de_pseudopalavras.csv",
             .log()
             .wait()
             .test.selected(getText("S"))
-                    .success( getVar("RESPOSTA").set(row.aprovar) )
-                    .failure( getVar("RESPOSTA").set(row.remover) )
+                    .success( getVar("RESPOSTA").set(row.Aprovar) )
+                    .failure( getVar("RESPOSTA").set(row.Remover) )
     )
 
     .log("NOME", getVar("NOME"))             // nome do participante
@@ -121,7 +121,12 @@ Template("lista_de_pseudopalavras.csv",
 )
     
 newTrial( "Final" ,
-    newText("<p> Trabalho finalizado, obrigada pela participação!</p>")
+    newText("<p><strong>Obrigada pela participação!</strong></p>")
+    .center()
+    .print()
+    ,
+    
+    newText("<p>Salve os dados da sua seleção clicando no botão <strong>Finalizar</strong>.</p>")
     .center()
     .print()
     ,
