@@ -69,18 +69,18 @@ Template("lista_de_pseudopalavras.csv",
             ,
             
         newImage("play.png")
-            .size( 50, 50)
+            .size( 90, 90)
             .center()
             .print
             ,
 
-        getImage("alto_falante_icone.png")
+        getImage("play.png")
             .remove()
         ,
                      
-        newText("S", variable.aprovar)
+        newText("S", row.aprovar)
         ,
-        newText("N", variable.remover)
+        newText("N", row.remover)
         ,
         
         newCanvas( "2000vw, 800vh")
@@ -95,8 +95,8 @@ Template("lista_de_pseudopalavras.csv",
             .wait()
     )
 
-    .log("grupo", variable.grupo)
-    .log("intem", variable.intem)
+    .log("grupo", row.grupo)
+    .log("intem", row.intem)
 
 )
     
