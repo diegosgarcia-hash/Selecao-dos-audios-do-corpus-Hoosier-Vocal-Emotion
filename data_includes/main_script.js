@@ -1,8 +1,7 @@
 PennController.ResetPrefix(null);
 PennController.DebugOff();
-var showProgressBar = false;
 
-Sequence("Participants","Instructions", randomize("Experiment"), SendResults(), "Final");
+Sequence("Terms", "Participants","Instructions", randomize("Experiment"), SendResults(), "Final");
 
 Header(
     defaultText
@@ -21,6 +20,30 @@ Header(
         .center()
         .wait()
     )
+    
+    newTrial("Terms",
+        newImage("LogoUAST","images.png")
+        .center()
+        .print()
+        ,
+        newText(
+        "<p style='text-align: center;'><strong>TERMO DE CONSENTIMENTO PARA PARTICIPAÇÃO EM PESQUISA</strong></p>"
+            )
+        ,
+        newText(
+        `<p style="text-align: justify;">
+            Você foi selecionado(a) para participar da pesquisa <strong>"ANÁLISE ACÚSTICA DA RAIVA E TRISTEZA NO CORPUS HOOSIER VOCAL EMOTION COLLECTION EM RELAÇÃO A PADRÕES ACÚSTICOS DESCRITOS NA LITERATURA"</strong>, sob a responsabilidade do pesquisador Diego Silva Garcia e orientador Ebson Wikerson.<br><br>
+            Esta pesquisa tem como objetivo aacvaliar os padrões acústicos presentes nas emoções raiva e tristeza do corpus Hoosier Vocal Emotion Collection e o que a literatura descreve. Sua participação é voluntária e será realizada por meio deste formulário eletrônico, no qual você ouvirá cada áudios do corpus e indicará se os aprova ou não para a análise acústica. Todas as respostas serão anônimas e utilizadas exclusivamente para fins acadêmicos, a partir dos dados obtidos serão selecionados os 15 áudios mais votados para seguir para a análise acústica.<br><br>
+            Ao continuar e enviar suas respostas, você concorda que os dados coletados sejam utilizados na pesquisa e na elaboração do TCC. Para quaisquer dúvidas, você pode entrar em contato com o pesquisador responsável:</p>`
+            )
+        ,
+        newText("<p style='text-align:center;'><strong>E-mail: diego.sgarcia@ufrpe.br</strong></p>")
+        ,
+        newText("<p></p>")
+        ,
+        newButton("CONCORDO E CONTINUE")
+            .css({"margin-bottom": "50px"})  // espaço de 50px abaixo do botão
+        )
     
     newTrial("Participants",
         newText("<p>Bem-Vindos!</p>")
@@ -49,7 +72,7 @@ Header(
         ,  
         newHtml("yt", `
             <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/K4myJ86BWdM?si=39vrd5lO94S_1ar7"
+            src="https://www.youtube.com/embed/uY6e-dlTbdY"
             frameborder="0" allowfullscreen>
            </iframe>
           `)
@@ -110,13 +133,13 @@ Template("lista_de_pseudopalavras.csv",
                     .failure( getVar("RESPOSTA").set(row.Remover) )
     )
 
-    .log("NOME", getVar("NOME"))             // nome do participante
-    .log("AUDIO", row.audio)                 // nome do arquivo de áudio
-    .log("SENTENCA", row.sentenca)           // nome exibido
-    .log("TRANSCRICAO", row.transcricao)     // transcrição exibida
-    .log("RESPOSTA",    getVar("RESPOSTA"))  // RESPOSTA
-    .log("GRUPO", row.grupo)                 // se precisar
-    .log("ITEM", row.intem)                   // se precisar
+    .log("NOME", getVar("NOME"))
+    .log("AUDIO", row.audio)
+    .log("SENTENCA", row.sentenca)
+    .log("TRANSCRICAO", row.transcricao)
+    .log("RESPOSTA",    getVar("RESPOSTA"))
+    .log("GRUPO", row.grupo)
+    .log("ITEM", row.intem)
 
 )
     
